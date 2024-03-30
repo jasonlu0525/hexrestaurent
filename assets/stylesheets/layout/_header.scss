@@ -1,11 +1,12 @@
-.back-drop{
-    background: rgba(0,0,0);
-    @include breakpoint-down(767){
+.back-drop {
+    background: rgba(0, 0, 0);
+
+    @include breakpoint-down(767) {
         background: none;
- }
+    }
 }
 
-.header{
+.header {
     background-image: url('./image/header_desktop.png');
     background-repeat: no-repeat;
     // background-size: cover;
@@ -15,74 +16,124 @@
     justify-content: center;
     position: relative;
     background-position: center;
-    @include breakpoint-down(767){
+
+    @include breakpoint-down(767) {
         background-image: url('./image/Bitmap@2x.png');
 
         background-size: cover;
         margin: 0 -10px;
     }
 }
-.navbar{
+
+.navbar {
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     z-index: 9999;
-    background: rgba(0,0,0,0.75);
-    color:$white;
-    @include breakpoint-down(767){
-        padding: 13.5px 0;
-    }
-    & > .container{
+    background: rgba(0, 0, 0, 0.75);
+    color: $white;
+
+    &>.container {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+
 
     }
-    .logo{
-        font-size: map-get($font-size,4);
-        @include breakpoint-down(992){
-            font-size: map-get($font-size,5);
+
+    .logo {
+        width: 120px;
+        height: 24px;
+        background-image: url('./image/logo_w@svg.svg');
+        text-indent: 9999px;
+        overflow: hidden;
+        display: block;
+        @include breakpoint-down(992) {
+            // background-image: url('./image/logo_w.png');
+            width: 94px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
         }
     }
-    &-toggler{
+
+    &-toggler {
         display: none;
-        @include breakpoint-down(767){
+
+        @include breakpoint-down(767) {
             display: block;
             background-color: transparent;
             border: none;
             outline: none;
             color: $white;
-            font-size: map-get($font-size,4);
+            font-size: map-get($font-size, 4);
+            padding: 0;
+        }
+        &> .fa-solid{
+            display: block;
         }
     }
-    &-nav{
+
+    &-nav {
         display: flex;
-        @include breakpoint-down(767){
+
+        @include breakpoint-down(767) {
             display: none;
         }
     }
 
 
-    &-link{
-        padding: 0 15px;
-
+    &-link {
+        padding:  18px;
+        position: relative;
+        // hover 下底線
+        &::after{
+            content:'';
+            width: 0%;
+            height: 4px;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition:   width ease-in .2s;
+            background-color: $secondary-100;
+        }
+        // 非 active 連結顯示下底線
+        &:not(.active):hover::after{
+            width: 100%;
+        }
+        //  active 狀態
+        &.active,&:active{
+            background-color: lighten($primary,15%);
+            color: $secondary-100;
+        }
+        &.active:hover{
+          background-color:  lighten($primary,5%);
+        }
     }
 }
-.banner{
+
+.banner {
     color: $white;
-    background: rgba(0,0,0,0.35);
+    background: rgba(0, 0, 0, 0.35);
     padding: 1.25rem;
     text-align: center;
-    &-title{
-        font-size: map-get($font-size ,3);
+
+    &-title {
+        font-size: map-get($font-size , 3);
         margin-bottom: 1rem;
-        @include breakpoint-down(375){
-            font-size: map-get($font-size ,4);
+
+        @include breakpoint-down(375) {
+            font-size: map-get($font-size , 4);
         }
-        &-line-break{
+
+        &-line-break {
             display: none;
-            @include breakpoint-down(425){
+
+            @include breakpoint-down(425) {
                 display: block;
             }
         }
@@ -90,4 +141,3 @@
     }
 
 }
-

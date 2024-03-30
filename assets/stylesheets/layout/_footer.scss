@@ -64,8 +64,8 @@
                 padding-left: 0;
                 list-style: disc inside;
 
-                &::marker {
-                    color: $primary;
+                a {
+                    margin-left: -10px;
                 }
             }
 
@@ -92,6 +92,15 @@
             &>span {
                 text-indent: -9999px;
                 display: block;
+            }
+            &.fa-square-google-plus{
+                color: #DB4437 ;
+            }
+            &.fa-square-twitter{
+                color: #41ABE1 ;
+            }
+            &.fa-square-facebook{
+                color: #3A5795 ;
             }
         }
     }
