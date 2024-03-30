@@ -1,0 +1,15 @@
+1. 建立環境
+    index.html v
+    assets
+        stylesheets
+          layout
+          components
+          all.scss
+        all.min.css
+        script
+         all.js
+
+2. 設定 color v font v  base v 、css reset v
+3. layout pc+rwd
+    header
+    footer

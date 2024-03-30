@@ -1,0 +1,10 @@
+// 斷點
+// 1024  767 576 425 375 320
+
+
+
+@mixin breakpoint-down($breakpoint){
+ @media screen and (max-width:#{$breakpoint}px) {
+    @content;
+ }
+}

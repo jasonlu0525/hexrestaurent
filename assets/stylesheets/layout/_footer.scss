@@ -1,0 +1,9 @@
+.footer{
+    background-color: $secondary-200;
+    color: $secondary-100;
+    padding:  50px 0;
+    &-wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+}

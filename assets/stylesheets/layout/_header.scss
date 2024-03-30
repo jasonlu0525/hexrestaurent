@@ -1,0 +1,96 @@
+.back-drop{
+    background: rgba(0,0,0);
+    @include breakpoint-down(767){
+        background: none;
+ }
+}
+
+.header{
+    background-image: url('./image/header_desktop.png');
+    background-repeat: no-repeat;
+    // background-size: cover;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-position: center;
+    @include breakpoint-down(767){
+        background-image: url('./image/Bitmap@2x.png');
+
+        background-size: cover;
+        margin: 0 -10px;
+    }
+}
+.navbar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    background: rgba(0,0,0,0.75);
+    color:$white;
+    @include breakpoint-down(767){
+        padding: 13.5px 0;
+    }
+    & > .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+    .logo{
+        font-size: map-get($font-size,4);
+        @include breakpoint-down(992){
+            font-size: map-get($font-size,5);
+        }
+    }
+    &-toggler{
+        display: none;
+        @include breakpoint-down(767){
+            display: block;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            color: $white;
+            font-size: map-get($font-size,4);
+        }
+    }
+    &-nav{
+        display: flex;
+        @include breakpoint-down(767){
+            display: none;
+        }
+    }
+
+
+    &-link{
+        padding: 0 15px;
+
+    }
+}
+.banner{
+    color: $white;
+    background: rgba(0,0,0,0.35);
+    padding: 1.25rem;
+    text-align: center;
+    @include breakpoint-down(767){
+        margin: 0 10px;
+    }
+    &-title{
+        font-size: map-get($font-size ,3);
+        margin-bottom: 1rem;
+        @include breakpoint-down(375){
+            font-size: map-get($font-size ,4);
+        }
+        &-line-break{
+            display: none;
+            @include breakpoint-down(425){
+                display: block;
+            }
+        }
+
+    }
+
+}
+
