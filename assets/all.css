@@ -309,12 +309,14 @@ template {
 
 ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 img {
   max-width: 100%;
   height: auto;
-  vertical-align: middle;
+  display: block;
 }
 
 html {
@@ -345,6 +347,12 @@ p {
   padding-right: 10px;
   padding-left: 10px;
   margin: 0 auto;
+}
+
+.fix-page-bottom {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .back-drop {
@@ -432,11 +440,6 @@ p {
   padding: 1.25rem;
   text-align: center;
 }
-@media screen and (max-width: 767px) {
-  .banner {
-    margin: 0 10px;
-  }
-}
 .banner-title {
   font-size: 2.25rem;
   margin-bottom: 1rem;
@@ -457,10 +460,92 @@ p {
 
 .footer {
   background-color: rgba(250, 250, 250, 0.6980392157);
-  color: #EFE9E7;
+  color: #3D1101;
   padding: 50px 0;
+  margin-top: auto;
 }
 .footer-wrapper {
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
+  .footer-wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+.footer-intro {
+  width: 66%;
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .footer-intro {
+    width: 90%;
+    align-self: center;
+  }
+}
+@media screen and (max-width: 576px) {
+  .footer-intro {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}
+.footer-intro-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.footer-intro-about {
+  width: 50%;
+}
+@media screen and (max-width: 576px) {
+  .footer-intro-about {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .footer-intro-about {
+    width: 100%;
+  }
+}
+.footer-intro-contact {
+  width: 50%;
+  margin-left: 1.25rem;
+}
+@media screen and (max-width: 576px) {
+  .footer-intro-contact {
+    width: 80%;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 425px) {
+  .footer-intro-contact {
+    width: 100%;
+  }
+}
+.footer-intro-contact-list {
+  padding-left: 0;
+  list-style: disc inside;
+}
+.footer-intro-contact-list::marker {
+  color: #3D1101;
+}
+.footer-logo-list {
+  display: flex;
+  justify-content: end;
+  gap: 12px;
+  margin-top: 22px;
+}
+.footer-logo .logo {
+  margin-left: auto;
+}
+.footer-logo-link {
+  font-size: 31px;
+  overflow: hidden;
+  max-height: 31px;
+}
+.footer-logo-link > span {
+  text-indent: -9999px;
+  display: block;
 }
