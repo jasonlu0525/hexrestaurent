@@ -12,16 +12,15 @@ html{
     font-style: 16px;
 }
 body{
-    font-family:
-    $font-family, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:$font-family;
     line-height: map-get($line-height, "md");
-    scroll-behavior: smoothadd ;
+    scroll-behavior: smooth ;
 }
 a{
     text-decoration: none;
     color: inherit;
 }
-h1,h2,h3,h4,h5{
+h1,h2,h3,h4,h5,h6{
  font-weight: 900;
  margin: 0;
 }

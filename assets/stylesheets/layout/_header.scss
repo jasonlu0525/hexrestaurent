@@ -9,12 +9,10 @@
 .header {
     background-image: url('./image/header_desktop.png');
     background-repeat: no-repeat;
-    // background-size: cover;
     height: 420px;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
     background-position: center;
 
     @include breakpoint-down(767) {
