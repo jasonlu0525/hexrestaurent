@@ -357,7 +357,7 @@ p {
 }
 
 .back-drop {
-  background: rgb(0, 0, 0);
+  background: #000000;
 }
 @media screen and (max-width: 767px) {
   .back-drop {
@@ -388,8 +388,13 @@ p {
   top: 0;
   width: 100%;
   z-index: 9999;
-  background: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.75);
   color: #FFFFFF;
+}
+@media screen and (max-width: 767px) {
+  .navbar {
+    background-color: #000000;
+  }
 }
 .navbar > .container {
   display: flex;
@@ -436,12 +441,31 @@ p {
 }
 @media screen and (max-width: 767px) {
   .navbar-nav {
-    display: none;
+    transform: translateX(-100%);
+    transition: transform ease-in 0.2s;
+    position: absolute;
+    top: 100%;
+    z-index: 999;
+    width: 100%;
+    height: calc(100vh - 56px);
+    margin-left: -10px;
+    background: #000000;
+    flex-direction: column;
+  }
+  .navbar-nav.show {
+    transform: translateX(0%);
   }
 }
 .navbar-link {
   padding: 18px;
   position: relative;
+}
+@media screen and (max-width: 767px) {
+  .navbar-link {
+    display: block;
+    font-size: 1.25rem;
+    padding: 20px 10px;
+  }
 }
 .navbar-link::after {
   content: "";

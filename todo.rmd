@@ -15,7 +15,7 @@
     footer v
 
 4. 互動效果
-  優化連結 active 、hover 樣式 v
+  優化連結 active 、hover 樣式  ( header v footer )
   調整 footer 社群 icon 的顏色 v 、list style disc 圓點 v
   header 摺疊選單
 
