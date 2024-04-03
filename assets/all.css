@@ -307,6 +307,10 @@ template {
   display: none;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -316,7 +320,7 @@ ul {
 img {
   max-width: 100%;
   height: auto;
-  display: block;
+  vertical-align: middle;
 }
 
 html {
@@ -354,6 +358,70 @@ p {
   display: flex;
   flex-direction: column;
   height: 100vh;
+}
+
+.icon-wrapper {
+  position: relative;
+}
+.icon-wrapper.password-reconfirm {
+  margin-bottom: 12px;
+}
+.icon-wrapper > .fa-solid {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #3D1101;
+  opacity: 0.5;
+}
+
+.form {
+  margin-bottom: 15px;
+}
+.form-label {
+  width: 100%;
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 3px;
+}
+.form-control {
+  width: 100%;
+  display: block;
+  padding: 6px 0 6px 1.75rem;
+  background: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  box-shadow: inset 0px 1px 0px 0px #ECECEC;
+  max-height: 2rem;
+  border-radius: 3px;
+}
+.form-control:focus {
+  caret-color: #3D1101;
+  outline-color: #3D1101;
+}
+.form-text {
+  color: #FF5E45;
+  font-size: 0.875rem;
+}
+.form-link {
+  text-decoration: underline;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  padding: 7px 47.5px;
+  color: white;
+  cursor: pointer;
+  transition: background-color ease-in 0.2s;
+}
+
+.btn-warning-200 {
+  background-color: #FF5E45;
+}
+.btn-warning-200:hover {
+  background-color: #ff8a78;
 }
 
 .back-drop {
@@ -514,7 +582,7 @@ p {
 }
 
 .footer {
-  background-color: rgba(250, 250, 250, 0.6980392157);
+  background-color: #EFE9E7;
   color: #3D1101;
   padding: 50px 0;
   margin-top: auto;
@@ -612,4 +680,72 @@ p {
 }
 .footer-logo-link.fa-square-facebook {
   color: #3A5795;
+}
+
+.register {
+  background-color: #EFE9E7;
+  padding: 50px 0;
+}
+.register-line-break {
+  margin-bottom: 5px;
+}
+.register-title {
+  font-size: 3rem;
+  text-align: center;
+  color: #3D1101;
+  margin-bottom: 35px;
+}
+.register-title > span {
+  font-size: 1.25rem;
+  margin-top: 5px;
+  display: block;
+}
+.register-form {
+  width: 60.546%;
+  margin: 0 auto;
+  padding: 15px;
+  color: #3D1101;
+  border-top: 4px solid #FF5E45;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.16);
+}
+@media screen and (max-width: 768px) {
+  .register-form {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .register-form {
+    width: 100%;
+  }
+}
+.register-form-title {
+  text-align: center;
+  margin-bottom: 1rem;
+  width: 100%;
+  font-size: 1.125rem;
+}
+.register-clause, .register-text {
+  width: 48.30508%;
+}
+@media screen and (max-width: 576px) {
+  .register-clause, .register-text {
+    width: 100%;
+  }
+}
+.register-clause {
+  font-size: 1.125rem;
+}
+@media screen and (max-width: 576px) {
+  .register-clause {
+    margin-bottom: 15px;
+  }
+}
+.register-text {
+  margin-bottom: 15px;
+}
+.register-button {
+  margin-left: auto;
 }

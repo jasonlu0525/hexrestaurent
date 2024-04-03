@@ -1,0 +1,18 @@
+.btn{
+    display: inline-block;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    padding: 7px 47.5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color ease-in .2s;
+
+}
+
+.btn-warning-200{
+    background-color: $warning-200;
+    &:hover{
+        background-color: lighten($warning-200, 10%);
+     }
+}

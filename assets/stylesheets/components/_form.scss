@@ -1,0 +1,48 @@
+.icon-wrapper {
+    position: relative;
+    &.password-reconfirm{
+        margin-bottom: 12px;
+    }
+    &>.fa-solid {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        color:$primary;
+        opacity: 0.5;
+    }
+}
+
+.form {
+    margin-bottom: 15px;
+
+    &-label {
+        width: 100%;
+        display: block;
+        font-size: map-get($font-size , 7);
+        margin-bottom: 3px;
+    }
+
+    &-control {
+        width: 100%;
+        display: block;
+        padding: 6px  0 6px 1.75rem;
+        background: $white;
+        border: 1px solid $gray-100;
+        box-shadow: inset 0px 1px 0px 0px $gray-200;
+        max-height: 2rem;
+        border-radius: 3px;
+        &:focus{
+            caret-color: $primary;
+            outline-color: $primary;
+        }
+    }
+    &-text{
+        color: $warning-200;
+        font-size: map-get($font-size , 8);
+
+    }
+    &-link{
+        text-decoration: underline;
+    }
+}

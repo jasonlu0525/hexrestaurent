@@ -7,7 +7,7 @@ navbarToggler.addEventListener('click',function(){
     const isNavbarHasShown =  navbarNav.classList.contains("show");
     // 切換 hamburger icon
     navbarTogglerIcon.classList.toggle('fa-xmark', isNavbarHasShown);
-    console.log(isNavbarHasShown);
+
 
     // 禁止 y 軸 scrollbar
     if(isNavbarHasShown){

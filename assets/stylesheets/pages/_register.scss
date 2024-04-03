@@ -1,0 +1,67 @@
+.register {
+    background-color: $secondary-100;
+    padding: 50px 0;
+
+    &-line-break {
+        margin-bottom: 5px;
+    }
+
+    &-title {
+        font-size: map-get($font-size , 2);
+        text-align: center;
+        color: $primary;
+        margin-bottom: 35px;
+
+        &>span {
+            font-size: map-get($font-size , 5);
+            margin-top: 5px;
+            display: block;
+        }
+    }
+
+    &-form {
+        width: 60.546%;
+        margin: 0 auto;
+        padding: 15px;
+        color: $primary;
+        border-top: 4px solid$warning-200;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.16);
+
+        @include breakpoint-down(768) {
+            width: 80%;
+        }
+        @include breakpoint-down(425) {
+            width: 100%;
+        }
+
+        &-title {
+            text-align: center;
+            margin-bottom: 1rem;
+            width: 100%;
+            font-size: map-get($font-size , 6);
+        }
+    }
+    &-clause,&-text{
+        width: 48.30508%;
+        @include breakpoint-down(576) {
+            width: 100%;
+        }
+    }
+    &-clause {
+        font-size: map-get($font-size , 6);
+        @include breakpoint-down(576) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &-text {
+        margin-bottom: 15px;
+    }
+    &-button{
+        margin-left: auto;
+    }
+}
+
