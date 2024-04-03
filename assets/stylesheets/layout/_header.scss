@@ -80,7 +80,6 @@
 
     &-nav {
         display: flex;
-
         @include breakpoint-down(767) {
             &.show{
                 transform: translateX(0%);

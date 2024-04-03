@@ -16,6 +16,12 @@
 .form {
     margin-bottom: 15px;
 
+    &-wrapper{
+        padding: 15px;
+        color: $primary;
+        border-top: 4px solid$warning-200;
+        box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.16);
+    }
     &-label {
         width: 100%;
         display: block;
@@ -27,7 +33,7 @@
         width: 100%;
         display: block;
         padding: 6px  0 6px 1.75rem;
-        background: $white;
+        background-color: $white;
         border: 1px solid $gray-100;
         box-shadow: inset 0px 1px 0px 0px $gray-200;
         max-height: 2rem;

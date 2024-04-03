@@ -3,7 +3,7 @@
     border-radius: 3px;
     outline: none;
     border: none;
-    padding: 7px 47.5px;
+    padding: 7px 46.5px;
     color: white;
     cursor: pointer;
     transition: background-color ease-in .2s;
@@ -14,5 +14,11 @@
     background-color: $warning-200;
     &:hover{
         background-color: lighten($warning-200, 10%);
+     }
+}
+.btn-gray-300{
+    background-color: $gray-300;
+    &:hover{
+        background-color: lighten($gray-300, 10%);
      }
 }

@@ -1,3 +1,11 @@
+.bg-secondary-100 {
+  background-color: #EFE9E7;
+}
+
+.bg-secondary-200 {
+  background-color: rgba(250, 250, 250, 0.6980392157);
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -378,6 +386,12 @@ p {
 .form {
   margin-bottom: 15px;
 }
+.form-wrapper {
+  padding: 15px;
+  color: #3D1101;
+  border-top: 4px solid #FF5E45;
+  box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.16);
+}
 .form-label {
   width: 100%;
   display: block;
@@ -388,7 +402,7 @@ p {
   width: 100%;
   display: block;
   padding: 6px 0 6px 1.75rem;
-  background: #FFFFFF;
+  background-color: #FFFFFF;
   border: 1px solid #CCCCCC;
   box-shadow: inset 0px 1px 0px 0px #ECECEC;
   max-height: 2rem;
@@ -411,7 +425,7 @@ p {
   border-radius: 3px;
   outline: none;
   border: none;
-  padding: 7px 47.5px;
+  padding: 7px 46.5px;
   color: white;
   cursor: pointer;
   transition: background-color ease-in 0.2s;
@@ -422,6 +436,13 @@ p {
 }
 .btn-warning-200:hover {
   background-color: #ff8a78;
+}
+
+.btn-gray-300 {
+  background-color: rgba(0, 0, 0, 0.3490196078);
+}
+.btn-gray-300:hover {
+  background-color: rgba(26, 26, 26, 0.3490196078);
 }
 
 .back-drop {
@@ -682,10 +703,54 @@ p {
   color: #3A5795;
 }
 
-.register {
-  background-color: #EFE9E7;
-  padding: 50px 0;
+.login-form {
+  width: 29.296875%;
+  margin: 0 auto;
 }
+@media screen and (max-width: 1024px) {
+  .login-form {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .login-form {
+    width: 55%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .login-form {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .login-form {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .login-form {
+    width: 100%;
+  }
+}
+.login-form-title {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+}
+.login-button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.login-button-group > .btn {
+  margin-top: 15px;
+}
+
+.register, .login {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
 .register-line-break {
   margin-bottom: 5px;
 }
@@ -703,13 +768,9 @@ p {
 .register-form {
   width: 60.546%;
   margin: 0 auto;
-  padding: 15px;
-  color: #3D1101;
-  border-top: 4px solid #FF5E45;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.16);
 }
 @media screen and (max-width: 768px) {
   .register-form {
