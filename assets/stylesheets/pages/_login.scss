@@ -1,22 +1,28 @@
 .login {
     &-form {
-        width: 29.296875%;
+        width: 31.914893617%;
         margin: 0 auto;
-        @include breakpoint-down(1024){
+
+        @include breakpoint-down(1024) {
             width: 40%;
         }
-        @include breakpoint-down(768){
+
+        @include breakpoint-down(768) {
             width: 55%;
         }
-        @include breakpoint-down(576){
+
+        @include breakpoint-down(576) {
             width: 80%;
         }
-        @include breakpoint-down(425){
+
+        @include breakpoint-down(425) {
             width: 100%;
         }
-        @include breakpoint-down(375){
+
+        @include breakpoint-down(375) {
             width: 100%;
         }
+
         &-title {
             text-align: center;
             margin-bottom: 1rem;
@@ -28,7 +34,8 @@
         display: flex;
         justify-content: space-between;
         gap: 20px;
-        &>.btn{
+
+        &>.btn {
             margin-top: 15px;
         }
     }
