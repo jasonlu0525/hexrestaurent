@@ -35,7 +35,7 @@
             }
         }
         &-list{
-            line-height:  map-get($line-height,xl);
+            line-height:  map-get($line-height,2xl);
         }
         &-link{
             display: block;
@@ -154,7 +154,7 @@
     }
     &-item{
         width: 31.428571428%;
-        @include breakpoint-down(768) {
+        @include breakpoint-down(992) {
             width: calc(50% - 10px);
         }
         @include breakpoint-down(425) {
@@ -211,10 +211,6 @@
         object-fit: cover;
     }
     &-favorite{
-        ::before{
-            content: "\f004";
-            display: block;
-        }
         position: absolute;
         top: 9px;
         left: 9px;
@@ -222,12 +218,10 @@
         font-size: 23px;
         line-height: 20px;
         cursor: pointer;
-        &:hover{
-            color: $warning-200;
+        &.fill,&:hover {
+           font-weight: 900;
         }
-        &.fill{
-           fill: $white;
-        }
+
     }
     &-body{
         padding: 10px 10px 0;

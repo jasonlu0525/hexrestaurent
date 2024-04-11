@@ -1,0 +1,217 @@
+.feature,
+.thoughts,
+.booking {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: $primary;
+    // text-align: center;
+}
+
+
+.feature {
+    color: $primary;
+
+    &-title {
+        text-align: center;
+        font-size: map-get($font-size , 5);
+        position: relative;
+        line-height: map-get($line-height, xl);
+        margin-bottom: 31px;
+
+        &>span {
+            background: $secondary-100;
+            position: relative;
+            z-index: 999;
+            padding: 0 13px;
+            display: inline-block;
+        }
+
+        &:before {
+            content: "";
+            display: block;
+            width: 461px;
+            border-bottom: 1px solid #979797;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @include breakpoint-down(767) {
+                display: none;
+            }
+        }
+    }
+
+    &-list {
+        display: flex;
+        justify-content: space-between;
+        gap: 60px;
+        padding: 0 20px;
+
+        // @include breakpoint-down(768) {
+        // }
+        @include breakpoint-down(767) {
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+    }
+
+    &-item {
+        width: 33.3333%;
+
+        @include breakpoint-down(767) {
+            width: 50%;
+        }
+
+        @include breakpoint-down(576) {
+            width: 80%;
+        }
+
+        @include breakpoint-down(375) {
+            width: 100%;
+        }
+
+        &-image {
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 20px auto;
+        }
+
+        &-title {
+            text-align: center;
+            font-size: map-get($font-size, 6);
+            margin-bottom: 11px;
+        }
+    }
+}
+
+.chief {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    color: $secondary-100;
+
+    @include breakpoint-down(767) {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    @include breakpoint-down(425) {
+        padding: 0;
+    }
+
+    &-title {
+        font-size: map-get($font-size, 5);
+    }
+
+    &-subtitle {
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    &-image {
+        width: 50.755939524%;
+
+        @include breakpoint-down(767) {
+            width: 70%;
+        }
+
+        @include breakpoint-down(576) {
+            width: 80%;
+        }
+
+        @include breakpoint-down(425) {
+            width: 100%;
+        }
+
+        &>img {
+            height: 460px;
+            object-fit: cover;
+        }
+    }
+
+    &-intrdouctuon {
+        width: 43.617021276%;
+
+        @include breakpoint-down(767) {
+            width: 70%;
+            margin-bottom: 30px;
+        }
+
+        @include breakpoint-down(576) {
+            width: 80%;
+        }
+
+        @include breakpoint-down(425) {
+            width: 100%;
+            padding: 0 30px;
+        }
+    }
+}
+
+
+.thoughts-title,.booking-title {
+    font-size: map-get($font-size , 4);
+    text-align: center;
+}
+
+.thoughts {
+    color: $primary;
+    &-title {
+        margin-bottom: 2rem;
+    }
+
+    &-list {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        @include breakpoint-down(767){
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 7px;
+        }
+    }
+
+    &-item {
+        display: flex;
+        width:33.3333%;
+        gap: 13px;
+        @include breakpoint-down(767){
+            width: 50%;
+        }
+        @include breakpoint-down(576) {
+            width: 80%;
+        }
+
+        @include breakpoint-down(425) {
+            width: 100%;
+        }
+        &-avatar {
+            width: 67px;
+            height: 67px;
+            flex-shrink: 0;
+
+            &>img {
+                border-radius: 50%;
+            }
+        }
+        &-detail{
+            display: flex;
+    flex-direction: column;
+        }
+        &-title{
+            margin: 19px 0 22px;
+        }
+        &-text{
+            margin-bottom: 1rem;
+            line-height: map-get($line-height, lg );
+        }
+        &-name{
+            text-align: right;
+            margin-top: auto;
+        }
+    }
+}

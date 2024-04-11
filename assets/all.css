@@ -1,3 +1,7 @@
+.bg-primary {
+  background-color: #3D1101;
+}
+
 .bg-secondary-100 {
   background-color: #EFE9E7;
 }
@@ -703,6 +707,224 @@ p {
   color: #3A5795;
 }
 
+.feature,
+.thoughts,
+.booking {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #3D1101;
+}
+
+.feature {
+  color: #3D1101;
+}
+.feature-title {
+  text-align: center;
+  font-size: 1.25rem;
+  position: relative;
+  line-height: 1.6;
+  margin-bottom: 31px;
+}
+.feature-title > span {
+  background: #EFE9E7;
+  position: relative;
+  z-index: 999;
+  padding: 0 13px;
+  display: inline-block;
+}
+.feature-title:before {
+  content: "";
+  display: block;
+  width: 461px;
+  border-bottom: 1px solid #979797;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media screen and (max-width: 767px) {
+  .feature-title:before {
+    display: none;
+  }
+}
+.feature-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 0 20px;
+}
+@media screen and (max-width: 767px) {
+  .feature-list {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}
+.feature-item {
+  width: 33.3333%;
+}
+@media screen and (max-width: 767px) {
+  .feature-item {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .feature-item {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .feature-item {
+    width: 100%;
+  }
+}
+.feature-item-image {
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+.feature-item-title {
+  text-align: center;
+  font-size: 1.125rem;
+  margin-bottom: 11px;
+}
+
+.chief {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  color: #EFE9E7;
+}
+@media screen and (max-width: 767px) {
+  .chief {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .chief {
+    padding: 0;
+  }
+}
+.chief-title {
+  font-size: 1.25rem;
+}
+.chief-subtitle {
+  display: block;
+  margin-bottom: 1rem;
+}
+.chief-image {
+  width: 50.755939524%;
+}
+@media screen and (max-width: 767px) {
+  .chief-image {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .chief-image {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .chief-image {
+    width: 100%;
+  }
+}
+.chief-image > img {
+  height: 460px;
+  object-fit: cover;
+}
+.chief-intrdouctuon {
+  width: 43.617021276%;
+}
+@media screen and (max-width: 767px) {
+  .chief-intrdouctuon {
+    width: 70%;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .chief-intrdouctuon {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .chief-intrdouctuon {
+    width: 100%;
+    padding: 0 30px;
+  }
+}
+
+.thoughts-title, .booking-title {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.thoughts {
+  color: #3D1101;
+}
+.thoughts-title {
+  margin-bottom: 2rem;
+}
+.thoughts-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+@media screen and (max-width: 767px) {
+  .thoughts-list {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 7px;
+  }
+}
+.thoughts-item {
+  display: flex;
+  width: 33.3333%;
+  gap: 13px;
+}
+@media screen and (max-width: 767px) {
+  .thoughts-item {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .thoughts-item {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .thoughts-item {
+    width: 100%;
+  }
+}
+.thoughts-item-avatar {
+  width: 67px;
+  height: 67px;
+  flex-shrink: 0;
+}
+.thoughts-item-avatar > img {
+  border-radius: 50%;
+}
+.thoughts-item-detail {
+  display: flex;
+  flex-direction: column;
+}
+.thoughts-item-title {
+  margin: 19px 0 22px;
+}
+.thoughts-item-text {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+.thoughts-item-name {
+  text-align: right;
+  margin-top: auto;
+}
+
 .product {
   padding-top: 3rem;
   padding-bottom: 50px;
@@ -864,7 +1086,7 @@ p {
 .product-item {
   width: 31.428571428%;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .product-item {
     width: calc(50% - 10px);
   }
@@ -931,15 +1153,8 @@ p {
   line-height: 20px;
   cursor: pointer;
 }
-.card-favorite ::before {
-  content: "\f004";
-  display: block;
-}
-.card-favorite:hover {
-  color: #FF5E45;
-}
-.card-favorite.fill {
-  fill: #FFFFFF;
+.card-favorite.fill, .card-favorite:hover {
+  font-weight: 900;
 }
 .card-body {
   padding: 10px 10px 0;
