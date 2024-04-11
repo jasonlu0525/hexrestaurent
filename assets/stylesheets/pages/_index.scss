@@ -152,13 +152,15 @@
 }
 
 
-.thoughts-title,.booking-title {
+.thoughts-title,
+.booking-title {
     font-size: map-get($font-size , 4);
     text-align: center;
 }
 
 .thoughts {
     color: $primary;
+
     &-title {
         margin-bottom: 2rem;
     }
@@ -167,7 +169,8 @@
         display: flex;
         justify-content: space-between;
         gap: 20px;
-        @include breakpoint-down(767){
+
+        @include breakpoint-down(767) {
             justify-content: center;
             flex-wrap: wrap;
             gap: 30px;
@@ -177,11 +180,13 @@
 
     &-item {
         display: flex;
-        width:33.3333%;
+        width: 33.3333%;
         gap: 13px;
-        @include breakpoint-down(767){
+
+        @include breakpoint-down(767) {
             width: 50%;
         }
+
         @include breakpoint-down(576) {
             width: 80%;
         }
@@ -189,6 +194,7 @@
         @include breakpoint-down(425) {
             width: 100%;
         }
+
         &-avatar {
             width: 67px;
             height: 67px;
@@ -198,20 +204,106 @@
                 border-radius: 50%;
             }
         }
-        &-detail{
+
+        &-detail {
             display: flex;
-    flex-direction: column;
+            flex-direction: column;
         }
-        &-title{
+
+        &-title {
             margin: 19px 0 22px;
         }
-        &-text{
+
+        &-text {
             margin-bottom: 1rem;
-            line-height: map-get($line-height, lg );
+            line-height: map-get($line-height, lg);
         }
-        &-name{
+
+        &-name {
             text-align: right;
             margin-top: auto;
         }
+    }
+}
+
+
+.booking {
+
+    &-title {
+        margin-bottom: 38px;
+
+        @include breakpoint-down(767) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &-form {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+
+        @include breakpoint-down(576) {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+
+    &-map {
+        width: 50%;
+
+        @include breakpoint-down(576) {
+            width: 100%;
+        }
+
+        &>img {
+            height: 386px;
+            object-fit: cover;
+
+            @include breakpoint-down(576) {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &-field {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 6px;
+
+        @include breakpoint-down(576) {
+            width: 100%;
+            padding-bottom: 0;
+        }
+
+        &>.form {
+            margin-bottom: 12px;
+        }
+
+        & .form-label {
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+
+        & .form-control {
+            padding-left: 12px;
+        }
+    }
+
+    &-button-group {
+        text-align: right;
+        margin-top: auto;
+    }
+}
+
+.vegetarian-selection {
+    display: flex;
+    gap: 36px;
+    &>.form-label {
+        display: inline-flex;
+        gap: 6px;
+        align-items: center;
+        margin-bottom: 0;
     }
 }

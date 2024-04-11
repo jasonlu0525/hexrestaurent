@@ -7,7 +7,10 @@
     color: white;
     cursor: pointer;
     transition: background-color ease-in .2s;
-
+    &-small{
+        font-size: map-get($font-size , 8);
+        padding: 8px 21px;
+    }
 }
 
 .btn-warning-200{

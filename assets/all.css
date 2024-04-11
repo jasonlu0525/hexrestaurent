@@ -390,6 +390,10 @@ p {
 .form {
   margin-bottom: 15px;
 }
+.form-inline {
+  display: flex;
+  flex-wrap: wrap;
+}
 .form-wrapper {
   padding: 15px;
   color: #3D1101;
@@ -433,6 +437,10 @@ p {
   color: white;
   cursor: pointer;
   transition: background-color ease-in 0.2s;
+}
+.btn-small {
+  font-size: 0.875rem;
+  padding: 8px 21px;
 }
 
 .btn-warning-200 {
@@ -857,7 +865,8 @@ p {
   }
 }
 
-.thoughts-title, .booking-title {
+.thoughts-title,
+.booking-title {
   font-size: 1.5rem;
   text-align: center;
 }
@@ -923,6 +932,81 @@ p {
 .thoughts-item-name {
   text-align: right;
   margin-top: auto;
+}
+
+.booking-title {
+  margin-bottom: 38px;
+}
+@media screen and (max-width: 767px) {
+  .booking-title {
+    margin-bottom: 30px;
+  }
+}
+.booking-form {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+@media screen and (max-width: 576px) {
+  .booking-form {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+.booking-map {
+  width: 50%;
+}
+@media screen and (max-width: 576px) {
+  .booking-map {
+    width: 100%;
+  }
+}
+.booking-map > img {
+  height: 386px;
+  object-fit: cover;
+}
+@media screen and (max-width: 576px) {
+  .booking-map > img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+.booking-field {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 6px;
+}
+@media screen and (max-width: 576px) {
+  .booking-field {
+    width: 100%;
+    padding-bottom: 0;
+  }
+}
+.booking-field > .form {
+  margin-bottom: 12px;
+}
+.booking-field .form-label {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+.booking-field .form-control {
+  padding-left: 12px;
+}
+.booking-button-group {
+  text-align: right;
+  margin-top: auto;
+}
+
+.vegetarian-selection {
+  display: flex;
+  gap: 36px;
+}
+.vegetarian-selection > .form-label {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  margin-bottom: 0;
 }
 
 .product {

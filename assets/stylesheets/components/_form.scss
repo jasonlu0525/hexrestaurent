@@ -15,7 +15,10 @@
 
 .form {
     margin-bottom: 15px;
-
+    &-inline{
+        display: flex;
+        flex-wrap: wrap;
+    }
     &-wrapper{
         padding: 15px;
         color: $primary;
