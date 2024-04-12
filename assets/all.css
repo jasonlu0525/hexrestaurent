@@ -694,6 +694,7 @@ p {
   margin-top: 22px;
 }
 .footer-logo .logo {
+  display: block;
   margin-left: auto;
 }
 .footer-logo-link {

@@ -4,7 +4,6 @@
     padding-top: 50px;
     padding-bottom: 50px;
     color: $primary;
-    // text-align: center;
 }
 
 
@@ -47,9 +46,6 @@
         justify-content: space-between;
         gap: 60px;
         padding: 0 20px;
-
-        // @include breakpoint-down(768) {
-        // }
         @include breakpoint-down(767) {
             flex-wrap: wrap;
             flex-direction: column;
