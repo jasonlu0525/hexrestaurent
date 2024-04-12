@@ -273,7 +273,7 @@
             padding-bottom: 0;
         }
 
-        &>.form {
+        & >.form {
             margin-bottom: 12px;
         }
 
@@ -290,6 +290,9 @@
     &-button-group {
         text-align: right;
         margin-top: auto;
+        @include breakpoint-down(576) {
+           margin-top: 18px;
+        }
     }
 }
 
